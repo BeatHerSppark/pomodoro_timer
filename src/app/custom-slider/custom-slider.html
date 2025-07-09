@@ -1,0 +1,13 @@
+<label for="volume"
+  >{{ mode }} <span>{{ minutes }} min</span></label
+><br />
+<input
+  #modeSlider
+  (input)="onSlide(+modeSlider.value)"
+  type="range"
+  id="pomodoro"
+  name="custom_mode"
+  min="1"
+  max="60"
+  [value]="minutes"
+/><br />

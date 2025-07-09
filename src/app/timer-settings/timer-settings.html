@@ -1,0 +1,24 @@
+<div class="settings-container">
+  <div class="mode-options">
+    <h3>Mode options:</h3>
+    @for(mode of modes; track mode.value) {
+    <button
+      class="mode-btn"
+      [class.active]="currentMode.value == mode.value"
+      [value]="mode.value"
+      (click)="onChangeMode(mode)"
+    >
+      {{ mode.label }}
+      <p>
+        {{ mode.pomodoro }}min • {{ mode.break }}min • {{ mode.longBreak }}min
+      </p>
+    </button>
+    }
+  </div>
+  <div class="custom">
+    <h3>Custom settings:</h3>
+    <custom-slider mode="Pomodoro" [minutes]="currentMode.pomodoro" />
+    <custom-slider mode="Break" [minutes]="currentMode.break" />
+    <custom-slider mode="Long Break" [minutes]="currentMode.longBreak" />
+  </div>
+</div>

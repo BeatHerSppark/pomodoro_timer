@@ -1,0 +1,9 @@
+input[name="custom_mode"] {
+  width: 18rem;
+  margin-bottom: 1rem;
+}
+
+label span {
+  color: var(--gray-400);
+  font-size: 0.85rem;
+}

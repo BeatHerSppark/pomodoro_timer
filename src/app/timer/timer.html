@@ -1,0 +1,17 @@
+<div class="timer-container">
+  <h2
+    class="red-text"
+    [ngClass]="timerType == 'pomodoro' ? 'red-text' : 'blue-text'"
+  >
+    {{ displayTimer }}
+  </h2>
+  <p>
+    Mode: <span>{{ currentMode?.label }}</span>
+  </p>
+  <button
+    [ngClass]="timerType == 'pomodoro' ? 'red-bg' : 'blue-bg'"
+    (click)="onStart()"
+  >
+    START
+  </button>
+</div>

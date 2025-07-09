@@ -1,0 +1,27 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--gray-700);
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  width: 12rem;
+}
+
+button:hover {
+  background-color: #c34d5b;
+}

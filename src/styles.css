@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 1.25rem 0.75rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--gray-700);
+  cursor: pointer;
+  transition: 0.2s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 1.25rem;
+}
+
+button:hover {
+  background-color: rgba(240, 75, 94, 0.1);
+}
+
+.red-text {
+  color: var(--red);
+}
+
+.blue-text {
+  color: var(--blue);
+}
+
+.red-bg {
+  background-color: var(--red);
+  color: white;
+}
+
+.blue-bg {
+  background-color: var(--blue);
+  color: white;
+}
+
+.active {
+  background-color: rgba(240, 75, 94, 0.1);
+}

@@ -26,7 +26,7 @@ export class TimerService {
     if (this.isRunning || this.currentSeconds <= 0) return;
     this.isRunning = true;
 
-    this.intervalSub = interval(10).subscribe(() => {
+    this.intervalSub = interval(1000).subscribe(() => {
       if (this.currentSeconds > 0) {
         this.currentSeconds--;
         this.timerSecondsSubject.next(this.currentSeconds);

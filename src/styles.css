@@ -38,6 +38,10 @@ button:hover {
   color: white;
 }
 
+.blue-bg:hover {
+  background-color: rgba(75, 122, 240, 0.781) !important;
+}
+
 .active {
   background-color: rgba(240, 75, 94, 0.1);
 }

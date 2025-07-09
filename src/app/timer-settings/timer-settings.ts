@@ -13,6 +13,7 @@ export class TimerSettings implements OnInit {
   @Output() selectedMode = new EventEmitter<Mode>();
 
   currentMode = this.modes[1];
+  isCustom = false;
 
   ngOnInit(): void {
     setTimeout(() => {

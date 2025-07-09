@@ -17,8 +17,8 @@
   </div>
   <div class="custom">
     <h3>Custom settings:</h3>
-    <custom-slider mode="Pomodoro" [minutes]="currentMode.pomodoro" />
-    <custom-slider mode="Break" [minutes]="currentMode.break" />
-    <custom-slider mode="Long Break" [minutes]="currentMode.longBreak" />
+    <custom-slider timer="pomodoro" [minutes]="currentMode.pomodoro" [currentMode]="currentMode" (changeCurrentMode)="onChangeMode($event)" />
+    <custom-slider timer="break" [minutes]="currentMode.break" [currentMode]="currentMode" (changeCurrentMode)="onChangeMode($event)" />
+    <custom-slider timer="longBreak" [minutes]="currentMode.longBreak" [currentMode]="currentMode" (changeCurrentMode)="onChangeMode($event)" />
   </div>
 </div>

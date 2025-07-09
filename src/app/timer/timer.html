@@ -3,15 +3,29 @@
     class="red-text"
     [ngClass]="timerType == 'pomodoro' ? 'red-text' : 'blue-text'"
   >
-    {{ displayTimer }}
+    {{ displayTimer$ | async }}
   </h2>
   <p>
     Mode: <span>{{ currentMode?.label }}</span>
   </p>
-  <button
-    [ngClass]="timerType == 'pomodoro' ? 'red-bg' : 'blue-bg'"
-    (click)="onStart()"
-  >
-    START
-  </button>
+  <div class="timer-buttons">
+    <button
+      [ngClass]="timerType == 'pomodoro' ? 'red-bg' : 'blue-bg'"
+      (click)="onStart()"
+    >
+      START
+    </button>
+    <button
+      [ngClass]="timerType == 'pomodoro' ? 'red-bg' : 'blue-bg'"
+      (click)="onStop()"
+    >
+      STOP
+    </button>
+    <button
+      [ngClass]="timerType == 'pomodoro' ? 'red-bg' : 'blue-bg'"
+      (click)="onReset()"
+    >
+      RESET
+    </button>
+  </div>
 </div>

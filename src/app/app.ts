@@ -18,12 +18,15 @@ export class App {
 
   currentTimer = 'pomodoro';
   currentMode!: Mode;
+  manualChange: boolean = true;
 
-  onChangeTimer(timer: string) {
+  onChangeTimer(timer: string, manual: boolean | undefined) {
+    this.manualChange = manual ? true : false;
     this.currentTimer = timer;
   }
 
-  onChangeMode(mode: Mode) {
+  onChangeMode(mode: Mode, manual: boolean | undefined) {
+    this.manualChange = manual ? true: false;
     this.currentMode = mode;
   }
 }

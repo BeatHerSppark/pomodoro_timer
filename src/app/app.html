@@ -9,13 +9,18 @@
     <button
       class="timer-btn"
       [class.active]="currentTimer == timer.value"
-      (click)="onChangeTimer(timer.value)"
+      (click)="onChangeTimer(timer.value, true)"
       [value]="timer.value"
     >
       {{ timer.label }} <span>{{ timer.count }}</span>
     </button>
     }
   </div>
-  <timer [timerType]="currentTimer" [currentMode]="currentMode" />
-  <timer-settings (selectedMode)="onChangeMode($event)" />
+  <timer
+    [timerType]="currentTimer"
+    [currentMode]="currentMode"
+    (changeTimerType)="onChangeTimer($event, false)"
+    [manualChange]="manualChange"
+  />
+  <timer-settings (selectedMode)="onChangeMode($event, true)" />
 </main>
